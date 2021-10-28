@@ -46,7 +46,7 @@ public class servidor {
 			servidor = new ServerSocket(PUERTO);
 			System.out.println("ESTAMOS EN EL SERVIDOR");
 			
-			//el servidor estar· atento a las peticiones y lo hacemos con el while true
+			//el servidor estar√° atento a las peticiones y lo hacemos con el while true
 			System.out.println("Esperando a que se conecte el cliente.............");
 			
 			
@@ -58,7 +58,7 @@ public class servidor {
 				
 				System.out.println("Cliente conectado");
 			
-			//creas la comunicaciÛn
+			//creas la comunicaci√≥n
 				in = new DataInputStream(sc.getInputStream());
 				out = new DataOutputStream(sc.getOutputStream());
 			
@@ -67,7 +67,7 @@ public class servidor {
 				
 				System.out.println(mensaje);
 				
-				out.writeUTF("Mensaje desde el servidor, hemos recibido su peticiÛn.");
+				out.writeUTF("Mensaje desde el servidor, hemos recibido su petici√≥n.");
 				
 				String mensaje3 = null;
 				
@@ -110,7 +110,9 @@ public class servidor {
 				}else if(mensaje21.equalsIgnoreCase("FIN")) {
 					
 					mensaje3 = "Cliente desconectado";
-					}
+				}else {
+					mensaje3 = "Libro no encontrado";
+						}
 				
 				
 					out.writeUTF(mensaje3);	
